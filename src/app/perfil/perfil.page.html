@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+  <ion-label>{{cedula}}</ion-label>
+</ion-item>
+<ion-item>
+  <ion-input label="Nombre" [(ngModel)]="txt_nombre"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input label="Apellido" [(ngModel)]="txt_apellido"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input label="E-mail" [(ngModel)]="txt_correo"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input type="password" label="clave" [(ngModel)]="txt_clave" (focusout)="vclave()"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input type="password" label="Verificar clave" [(ngModel)]="txt_cclave"(focusout)="vclave()" ></ion-input>
+  <label>{{mensaje}}</label>
+</ion-item>
+<ion-item>
+<ion-button class="succeess" (click)=" actualizardatos()"> Actualizar</ion-button>
+<ion-button class="warning" (click)="cancelar()"> Cancelar</ion-button>
+</ion-item>
+</ion-content>

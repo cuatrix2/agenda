@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Contactos</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-fab slot="fixed" vertical="top" horizontal="end">
+  <ion-fab-button (click)="nuevo()" >
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  </ion-fab>
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item-sliding *ngFor="let fila of contactos">
+      <ion-item>
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
+        <ion-label> 
+          <b>Nombre</b> {{fila.nombre}}<br>
+        <b>Telf:</b> {{fila.telefono}}
+      </ion-label>
+      </ion-item>
+      <ion-item-options>
+      <ion-item-option (click)="editar(fila.codigo)" color="warning">Editar</ion-item-option>
+      <ion-item-option (click)="eliminar(fila.codigo)" color="danger">Eliminar</ion-item-option>
+    </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+</ion-content>
