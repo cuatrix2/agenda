@@ -45,8 +45,8 @@ txt_email:string="";
   }
 
   actualizar(){
-    
-    this.navCtrl.navigateRoot('/contactos');
+
+   
   }
   cancelar(){
     this.navCtrl.navigateRoot('/contactos');
